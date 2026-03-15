@@ -8,7 +8,7 @@ Promise.all(modelSyncPromises)
 .then(async ()=>{
     console.log("Database connected successfully");
     const { LocaleText } = require("./src/services/locale.service")
-    LocaleText.compile()
+    //LocaleText.compile()
 
     
     require("./src/routers");
