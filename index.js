@@ -1,18 +1,18 @@
 console.log('CSGOCC is starting up')
-const { app } = require("./services/webapp.service");
+const { app } = require("./src/services/webapp.service");
 
-const { modelSyncPromises } = require("./models");
-const { resolveSteamId, getSteamData } = require("./services/steamdata.service");
+const { modelSyncPromises } = require("./src/models");
+const { resolveSteamId, getSteamData } = require("./src/services/steamdata.service");
 
 Promise.all(modelSyncPromises)
 .then(async ()=>{
     console.log("Database connected successfully");
-    const { LocaleText } = require("./services/locale.service")
+    const { LocaleText } = require("./src/services/locale.service")
     LocaleText.compile()
 
     
-    require("./routers");
-    require("./services/games.service")
+    require("./src/routers");
+    require("./src/services/games.service")
 
     const id = await resolveSteamId("https://steamcommunity.com/profile/76561198169903401");
     console.log(id)
