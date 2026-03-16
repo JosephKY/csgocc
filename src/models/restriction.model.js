@@ -11,7 +11,7 @@ const Restriction = db.define("restriction", {
         allowNull: true
     },
     'subject': {
-        type: db.Sequelize.TEXT, // format: 'ip/steamid/deviceid:(subject)'
+        type: db.Sequelize.STRING(100), // format: 'ip/steamid/deviceid:(subject)'
         allowNull: false
     },
     'adminNote': {

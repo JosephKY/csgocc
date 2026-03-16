@@ -7,7 +7,7 @@ const Agreement = db.define("agreement", {
         autoIncrement: true
     },
     'steamId': {
-        type: db.Sequelize.TEXT,
+        type: db.Sequelize.STRING(64),
         allowNull: false
     },
     'active': {

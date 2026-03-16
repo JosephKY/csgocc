@@ -2,12 +2,12 @@ const { db } = require("../services/db.service");
 
 const SteamData = db.define("steamdata", {
     'steamId': {
-        type: db.Sequelize.TEXT,
+        type: db.Sequelize.STRING(64),
         primaryKey: true,
         autoIncrement: false
     },
     'customSteamId': {
-        type: db.Sequelize.TEXT,
+        type: db.Sequelize.STRING(64),
         allowNull: true,
         defaultValue: null
     },

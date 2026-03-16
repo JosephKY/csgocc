@@ -7,16 +7,16 @@ const APICall = db.define("apicall", {
         autoIncrement: true
     },
     'endpoint': {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.STRING(64),
         allowNull: false,
     },
     'method': {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.STRING(64),
         allowNull: true,
         defaultValue: null
     },
     'identifier': {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.STRING(64),
         allowNull: true,
         defaultValue: null
     },

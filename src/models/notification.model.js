@@ -2,7 +2,7 @@ const { db } = require("../services/db.service");
 
 const Notification = db.define("notification", {
     'steamId': {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.STRING(64),
         allowNull: false,
         unique: false
     },

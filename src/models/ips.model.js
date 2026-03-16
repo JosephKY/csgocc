@@ -7,7 +7,7 @@ const IP = db.define("ip", {
         primaryKey: true
     },
     'ipHash': {
-        type: db.Sequelize.TEXT,
+        type: db.Sequelize.STRING(64),
         allowNull: false
     },
     'ipEncrypted': {
@@ -15,7 +15,7 @@ const IP = db.define("ip", {
         allowNull: false
     },
     'steamId': {
-        type: db.Sequelize.TEXT,
+        type: db.Sequelize.STRING(64),
         allowNull: false
     },
     'lastSeen': {

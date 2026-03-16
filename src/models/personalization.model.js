@@ -2,9 +2,8 @@ const { db } = require("../services/db.service");
 
 const Personalization = db.define("personalization", {
     'steamId': {
-        type: db.Sequelize.TEXT,
-        allowNull: false,
-        defaultValue: null
+        type: db.Sequelize.STRING(64),
+        allowNull: false
     },
     'type': {
         type: db.Sequelize.ENUM('avatar', 'nickname'),
