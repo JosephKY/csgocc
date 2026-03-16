@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/csgocomp/src
+    - /bin/cp -r $CI_PROJECT_DIR/. $DEPLOYPATH
