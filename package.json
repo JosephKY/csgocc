@@ -18,7 +18,7 @@
     "ws": "^8.19.0"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "pm2 start index.js --name csgocc"
   },
   "name": "csgocc",
   "version": "1.0.0",
