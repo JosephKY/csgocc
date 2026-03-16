@@ -8,6 +8,7 @@ const compression = require('compression');
 const helmet = require('helmet');
 const configApp = require("../configs/app.config");
 
+app.set("trust proxy", true);
 app.disable('x-powered-by');
 app.use(helmet.contentSecurityPolicy({
     directives: {
