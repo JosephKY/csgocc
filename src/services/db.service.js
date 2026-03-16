@@ -30,6 +30,7 @@ new Sequelize(
 });
 */
 
+/*
 const db = new Sequelize(
     configDb.database,
     configDb.username,
@@ -43,5 +44,17 @@ const db = new Sequelize(
         //ssl: process.env.MODE == 'PROD',
     }
 )
+*/
+
+const db = new Sequelize({
+    username: configDb.username,
+    database: configDb.database,
+    port: configDb.port || 3306,
+    password: configDb.password,
+    dialect: 'mysql',
+    host: configDb.host,
+    ssl: process.env.MODE == 'PROD',
+    logging: false
+})
 
 module.exports = { db }
